@@ -1,26 +1,44 @@
 programa {
   funcao inicio() {
-    // Declaração de variáveis
-    real base, altura
-    real area
+    cadeia nome
+    inteiro idade
+    real primeiraNota, segundaNota, terceiraNota
+    real media
 
-    // Solicitando dados para o usuário
-    escreva("Digite a base: ")
-    leia(base)
+    escreva("Digite seu nome: ")
+    leia(nome)
 
-    escreva("Digite a altura: ")
-    leia(altura)
+    escreva("Digite sua idade: ")
+    leia(idade)
 
-    // Área de cálculos
-    area = (base * altura) / 2
+    escreva("Digite a nota de português: ")
+    leia(primeiraNota)
 
-    // Exibindo resultados para o usuário
+    escreva("Digite a nota de matemática: ")
+    leia(segundaNota)
+
+    escreva("Digite a nota de história: ")
+    leia(terceiraNota)
+
+    media = (primeiraNota + segundaNota + terceiraNota) / 3
+
     limpa()
-    escreva("=== Exibindo resultados ===")
-    escreva("\nBase: ", base)
-    escreva("\nAltura: ", altura)
-    escreva("\nÁrea: ", area)
+    escreva("===Resultados===")
+    escreva("\nNome: ", nome)
+    escreva("\nIdade: ", idade)
+    escreva("\nPortugês: ", primeiraNota)
+    escreva("\nMatemática: ", segundaNota)
+    escreva("\nHistória: ", terceiraNota)
+    escreva("\nMédia: ", media)
+    se (media < 7) {
+      escreva("\nO aluno está reprovado")
+    }
+    senao {
+      escreva("\nO aluno está aprovado")
+    }
 
+
+    
 
   }
 }
